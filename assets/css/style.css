@@ -1,0 +1,45 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+    background: linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+    font-family:'Poppins', sans-serif;
+    color:#0f0;
+    overflow-x:hidden;
+}
+
+.hacker-font { font-family:'Orbitron', monospace; color:#0f0; text-shadow:0 0 5px #0f0; }
+
+.floating-background {
+    position:fixed; top:0; left:0; width:100%; height:100%;
+    background: repeating-radial-gradient(circle,#0f0 1px,transparent 10px);
+    animation: floatBG 30s linear infinite;
+    z-index:-1;
+}
+
+@keyframes floatBG { 0% {background-position:0 0;} 100% {background-position:500px 500px;} }
+
+header { text-align:center; padding:50px 20px; }
+header .name { font-size:3em; animation: floatText 6s ease-in-out infinite alternate; }
+header .tagline { font-size:1.5em; animation: floatText 4s ease-in-out infinite alternate-reverse; }
+header button {
+    margin-top:20px; padding:15px 30px; border-radius:50px; border:none;
+    cursor:pointer; background:#0f0; color:#000; font-weight:bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+header button:hover { transform:scale(1.1) rotate(-5deg); box-shadow:0 0 20px #0f0; }
+
+@keyframes floatText { 0% {transform: translateY(0px);} 100% {transform: translateY(-15px);} }
+
+.projects { padding:50px 20px; }
+.projects h2 { text-align:center; font-size:2em; margin-bottom:30px; }
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:30px; }
+.project-card {
+    background: rgba(0,0,0,0.8); padding:20px; border-radius:15px; text-align:center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatCard 6s ease-in-out infinite alternate;
+}
+.project-card img { width:100%; border-radius:10px; margin-bottom:15px; }
+.project-card:hover { transform:scale(1.05); box-shadow:0 0 20px #0f0; }
+@keyframes floatCard { 0% {transform:translateY(0px);} 100% {transform:translateY(-10px);} }
+
+.about { padding:50px 20px; text-align:center; font-size:1.2em; max-width:800px; margin:0 auto; }

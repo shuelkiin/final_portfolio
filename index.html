@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A creative portfolio by Shuel Kiin — developer of beautiful, functional and interactive systems." />
+  <meta name="keywords" content="Shuel Kiin, developer, portfolio, web systems, PHP, MySQL, Tailwind" />
+  <meta name="author" content="Shuel Kiin" />
+  <meta property="og:title" content="Shuel Kiin | Developer Portfolio" />
+  <meta property="og:description" content="Smart, modern and crazy-normal portfolio of Shuel Kiin." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/portfolio-cover.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+
+  <title>Shuel Kiin | Developer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@next/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background: radial-gradient(circle at top left, #101820, #0a0a0a);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e0e0e0;
+    }
+    header {
+      backdrop-filter: blur(10px);
+    }
+    .hacker-font {
+      font-family: "Courier New", monospace;
+      letter-spacing: 1px;
+    }
+    .floating {
+      animation: float 4s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+
+<body class="text-gray-200">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-black/70 border-b border-gray-700">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <h1 class="text-xl hacker-font text-green-400">Shuel Kiin</h1>
+      <nav class="space-x-6">
+        <a href="#about" class="hover:text-green-400 transition">About</a>
+        <a href="#projects" class="hover:text-green-400 transition">Projects</a>
+        <a href="#contact" class="hover:text-green-400 transition">Contact</a>
+        <a href="generate_pdf.php" class="px-4 py-2 bg-green-500 text-black rounded hover:bg-green-400 transition font-semibold">Download PDF</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="text-center py-20 px-6" data-aos="fade-down">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4 hacker-font text-green-400">Hey, I'm Shuel Kiin</h2>
+    <p class="text-lg max-w-xl mx-auto text-gray-300 mb-6">
+      A full-stack developer passionate about building clean, functional and user-friendly systems — with just the right amount of madness.
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 bg-gray-900/40" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h3 class="text-2xl font-semibold mb-4 text-green-400 hacker-font">Who is Shuel Kiin?</h3>
+      <p class="text-gray-300 leading-relaxed">
+        A student and developer focused on creating intelligent digital systems that simplify real-world problems.  
+        From managing farms to automating bakeries, I enjoy turning ideas into functional, beautiful solutions that leave people saying: “Wait… you built this?”
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-black/60" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-semibold text-green-400 text-center mb-10 hacker-font">Featured Projects</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 floating">
+          <img src="assets/images/dairy-system.png" alt="Dairy System" class="rounded mb-4">
+          <h4 class="text-xl font-bold text-green-400">Dairy Farm Management System</h4>
+          <p class="text-gray-300">A digital platform for farmers to manage milk production, track sales, and generate reports effortlessly.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 floating">
+          <img src="assets/images/carrot-delivery.png" alt="Carrot Delivery" class="rounded mb-4">
+          <h4 class="text-xl font-bold text-green-400">Carrot Delivery System</h4>
+          <p class="text-gray-300">An intelligent delivery assignment platform where buyers assign drivers to deliver carrots efficiently.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 floating">
+          <img src="assets/images/bakery-delivery.png" alt="Bakery System" class="rounded mb-4">
+          <h4 class="text-xl font-bold text-green-400">Bakery Product Delivery System</h4>
+          <p class="text-gray-300">Manages bakery stock, purchases, and delivery logistics with automated PDF receipt generation.</p>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="bg-gray-800 p-4 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1 floating">
+          <img src="assets/images/calendar-journal.png" alt="Calendar Journal" class="rounded mb-4">
+          <h4 class="text-xl font-bold text-green-400">Calendar & Journal App</h4>
+          <p class="text-gray-300">A personal planner that automatically generates journal summaries and exports them as PDF.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-900/50" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-semibold text-green-400 hacker-font mb-6">Let's Connect</h3>
+      <p class="text-gray-300 mb-6">Interested in working with me or checking out my projects? Let’s talk!</p>
+
+      <!-- Social Media Links -->
+      <div class="flex justify-center space-x-6 mt-8">
+        <a href="https://linkedin.com/in/shuelkiin" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" class="w-8 h-8 invert hover:brightness-75">
+        </a>
+        <a href="https://github.com/shuelkiin" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" class="w-8 h-8 invert hover:brightness-75">
+        </a>
+        <a href="https://x.com/kiinshuel" target="_blank" class="hover:scale-110 transition-transform">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="Twitter X" class="w-8 h-8 invert hover:brightness-75">
+        </a>
+        <a href="https://instagram.com/its_shuel" target="_blank" class="hover:scale-110 transition-transform">
+  <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" class="w-8 h-8 invert hover:brightness-75">
+</a>
+
+      </div>
+
+      <p class="mt-6 text-gray-400">Email: <a href="mailto:shuelkiin@gmail.com" class="text-green-400 hover:underline">shuelkiin@gmail.com</a></p>
+      <p class="text-gray-400">Phone: <a href="tel:+254757355998" class="text-green-400 hover:underline">+254 757 355 998</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-400 py-6 text-center border-t border-gray-700">
+    <p>&copy; 2025 Shuel Kiin. Built with ❤️, Tailwind, and a hint of chaos.</p>
+  </footer>
+
+  <script>
+    AOS.init({ duration: 900, once: true });
+  </script>
+</body>
+</html>
